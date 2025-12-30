@@ -10,12 +10,12 @@ jobs:
     if: >
       github.event.pull_request.merged == true &&
       github.event.pull_request.base.ref == 'main'
-    runs-on: ubuntu-latest
+    runs-on: tenki-standard-medium-4c-8g
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0  # To get previous commit
+          fetch-depth: 0 # To get previous commit
 
       - name: Build Slack payload
         id: payload
