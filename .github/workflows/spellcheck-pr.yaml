@@ -1,14 +1,13 @@
 name: Automated Spellcheck & PR Creation
 
 on:
-  workflow_dispatch:  # Runs only when manually triggered
-
+  workflow_dispatch: # Runs only when manually triggered
 permissions:
-  contents: write  # Needed to push changes after approval
+  contents: write # Needed to push changes after approval
 
 jobs:
   spellcheck_and_apply:
-    runs-on: ubuntu-latest
+    runs-on: tenki-standard-medium-4c-8g
 
     steps:
       - name: Checkout Repository
