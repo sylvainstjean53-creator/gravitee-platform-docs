@@ -2,14 +2,13 @@ name: Sync Policy READMEs to Docs
 
 on:
   workflow_dispatch:
-
 permissions:
-  contents: write       # Needed to push changes to a new branch
-  pull-requests: write  # Needed to create a PR
+  contents: write # Needed to push changes to a new branch
+  pull-requests: write # Needed to create a PR
 
 jobs:
   sync:
-    runs-on: ubuntu-latest
+    runs-on: tenki-standard-medium-4c-8g
     steps:
       - name: Checkout docs repository
         uses: actions/checkout@v3
